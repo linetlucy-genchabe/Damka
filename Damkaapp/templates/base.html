@@ -1,0 +1,110 @@
+{%load bootstrap5%}{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/images/Damka logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/images/Damka logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/images/Damka logo.png">
+
+  {% if title %}
+  <title>DAMKA - {{title}}</title>
+  {% else %}
+    <title>DAMKA </title>
+  {% endif %}
+ 
+
+  {% block styles %}
+    
+ {% bootstrap_css %}
+ <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+  <link rel="stylesheet" href="/static/css/styles.css"> 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+
+  {% endblock %}
+
+  <script>
+    let user = "{{request.user}}"
+
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getCookie('csrftoken');
+</script>
+
+</head>
+
+<body>
+    
+    {% include "navbar.html" %}
+
+
+    {% block content %} 
+    
+    
+    {%endblock%}
+  
+
+  
+
+
+
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- JQuery -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+      <script type="text/javascript" src="{% static 'script.js' %}"></script>
+
+    {% endblock %}
+
+   <!-- Footer -->
+<footer class="page-footer font-small font-weight-bold  mt-2 " style="background-color: rgb(217, 91, 23) ; color: white;height: 10vh;">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2023 Copyright.
+       <!-- <a href="https://github.com/linetlucy-genchabe"> -->
+         Damka || Design & Dev by: <a href="https://linetlucy-genchabe.github.io/linetlucy-portfolio " >Linetlucy</a> 
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js">
+</script>
+<script src="{% static 'script.js' %}"></script>
+{% csrf_token %}
+<script>
+    csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+</script>
+
+</body>
+
+</html>
