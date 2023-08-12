@@ -1,3 +1,8 @@
 *{
     font-family: cambria;
 }
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+h1 {
+    color: rgb(210, 84, 30);
+    font-family: 'pacifico', cursive;
+}
