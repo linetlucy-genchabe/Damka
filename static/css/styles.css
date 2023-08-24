@@ -6,3 +6,8 @@ h1 {
     color: rgb(210, 84, 30);
     font-family: 'pacifico', cursive;
 }
+
+nav li:hover{
+    background-color: rgb(208, 207, 206);
+   
+}
