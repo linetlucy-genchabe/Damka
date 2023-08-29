@@ -27,3 +27,9 @@ def index(request):
   
 
     return render(request, 'index.html')
+
+def resources(request):
+  
+
+    return render(request, 'resources.html')
+
