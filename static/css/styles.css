@@ -2,9 +2,10 @@
     font-family: cambria;
 }
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=rubik&display=swap');
 h1 {
     color: rgb(210, 84, 30);
-    font-family: 'pacifico', cursive;
+    font-family: 'rubik';
 }
 
 nav li:hover{
@@ -12,21 +13,4 @@ nav li:hover{
    
 }
 
-
-#skills ul {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-#skills li {
-    background-color: rgb(26, 22, 26);
-    box-shadow: 20px 20px 1px 2px rgb(249, 218, 249);
-    font-size: 35px;
-    margin: 35px;
-    padding: 20px;
-    text-align: center;
-}
+#more {display: none;}
