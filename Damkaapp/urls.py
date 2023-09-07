@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^resources$', views.resources, name= 'resources'),
     url(r'^about$', views.about, name= 'about'),
     url(r'^activities$', views.activities, name= 'activities'),
+    url(r'^donate$', views.donate, name= 'donate'),
   
   
    

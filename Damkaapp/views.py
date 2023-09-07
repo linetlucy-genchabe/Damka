@@ -40,3 +40,7 @@ def activities(request):
   
 
     return render(request, 'activities.html')
+def donate(request):
+  
+
+    return render(request, 'donate.html')
