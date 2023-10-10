@@ -44,4 +44,8 @@ def donate(request):
   
 
     return render(request, 'donate.html')
+def events(request):
+  
+
+    return render(request, 'events.html')
 
