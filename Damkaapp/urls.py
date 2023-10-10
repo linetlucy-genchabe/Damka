@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^about$', views.about, name= 'about'),
     url(r'^activities$', views.activities, name= 'activities'),
     url(r'^donate$', views.donate, name= 'donate'),
+    url(r'^events$', views.events, name= 'events'),
   
   
    
