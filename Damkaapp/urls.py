@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^activities$', views.activities, name= 'activities'),
     url(r'^donate$', views.donate, name= 'donate'),
     url(r'^events$', views.events, name= 'events'),
+     url(r'^vacancies$', views.events, name= 'vacancies'),
   
   
    
