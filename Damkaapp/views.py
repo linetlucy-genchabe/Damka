@@ -48,4 +48,8 @@ def events(request):
   
 
     return render(request, 'events.html')
+def events(request):
+  
+
+    return render(request, 'careers.html')
 
