@@ -48,7 +48,7 @@ def events(request):
   
 
     return render(request, 'events.html')
-def vacancies(request):
+def careers(request):
   
 
     return render(request, 'careers.html')
