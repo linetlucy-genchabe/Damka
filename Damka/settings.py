@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-jny2f_08n2f61v)6j%#5!^vxu@olljt*897#ecrw&gi&aa+(3b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"," https://damkakenya.org/"," https://www.damkakenya.org/"]
 
 cloudinary.config( 
   cloud_name = "linetlucy", 
