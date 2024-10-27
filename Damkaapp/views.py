@@ -50,7 +50,7 @@ def events(request):
 def careers(request):
   
 
-    return render(request, 'careers.html')
+    return render(request, 'vacancies.html')
 
 
 def user_login(request):
