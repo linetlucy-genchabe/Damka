@@ -89,7 +89,8 @@ WSGI_APPLICATION = 'Damka.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASE_URL= 'postgresql://postgres:twILokIgLBHFgBmBXxVIqZxetvnpQlGo@autorack.proxy.rlwy.net:32222/railway'
+DATABASE_URL= 'postgresql://postgres:twILokIgLBHFgBmBXxVIqZxetvnpQlGo@monorail.proxy.rlwy.net:13964/railway'
+
 DATABASES = {
     'default': 
     dj_database_url.parse(DATABASE_URL,conn_max_age=600),
