@@ -96,7 +96,14 @@ WSGI_APPLICATION = 'Damka.wsgi.application'
 #     'default': 
 #     dj_database_url.parse(DATABASE_URL,conn_max_age=600),
 # }
-
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'damkadb',
+    'USER': 'postgres',
+    'PASSWORD':'lynne',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
