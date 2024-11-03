@@ -160,7 +160,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+CSRF_TRUSTED_ORIGINS = ['https://www.damkakenya.org/']
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'

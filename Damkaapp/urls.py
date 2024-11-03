@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^$', views.index, name= 'index'),
     url(r'login/$',views.user_login, name='login'),
-    url(r'logout/$',views.signout),
+    url(r'logout/$',views.signout, name= 'logout'),
     url(r'^vacancies$', views.careers, name= 'vacancies'),
     url(r'^new/activity$', views.new_activity, name='new-activity'),
     url(r'^new/event$', views.new_event, name='new-event'),
@@ -18,9 +18,6 @@ urlpatterns = [
     url(r'^events$', views.events, name= 'events'),
     # url(r'^careers$', views.careers, name= 'careers'),
 
-  
-  
-   
    
 ]
 

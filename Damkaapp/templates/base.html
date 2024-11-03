@@ -148,7 +148,14 @@
         <a href="https://www.instagram.com/damka_cbo/" class="fa fa-instagram" style="color: white;height: 40px;width: 25px;"></a>
         <a href="https://www.linkedin.com/in/don-amolo-memorial-kids-ark-923627210/" class="fa fa-linkedin" style="color: white;height: 40px;width: 25px;"></a>
 
+        <!-- <a href="{%url 'login'%}" class="login" style="color: white;height: 40px;width: 25px;">Login</a> -->
+
+        {% if user.is_authenticated %}
+        <a href="{%url 'logout'%}" class="login" style="color: white;height: 40px;width: 25px;">Logout</a>
+        {% else %}
         <a href="{%url 'login'%}" class="login" style="color: white;height: 40px;width: 25px;">Login</a>
+        {% endif %}
+
     </div>
 </div>
 <footer class="page-footer font-small font-weight-bold  mt-1 " style="background-color: rgb(217, 91, 23) ; color: white;height: 10vh;">
