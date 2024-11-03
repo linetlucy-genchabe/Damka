@@ -89,21 +89,21 @@ WSGI_APPLICATION = 'Damka.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASE_URL= ''
+DATABASE_URL= 'postgresql://postgres:JmLrJMujZEsjQzZRDNPWBEdYApxBmblX@autorack.proxy.rlwy.net:31450/railway'
 
 
-# DATABASES = {
-#     'default': 
-#     dj_database_url.parse(DATABASE_URL,conn_max_age=600),
-# }
 DATABASES = {
-    'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'damkadb',
-    'USER': 'postgres',
-    'PASSWORD':'lynne',
-    }
+    'default': 
+    dj_database_url.parse(DATABASE_URL,conn_max_age=600),
 }
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     'NAME': 'damkadb',
+#     'USER': 'postgres',
+#     'PASSWORD':'lynne',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
