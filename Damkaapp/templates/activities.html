@@ -162,9 +162,9 @@ These activities help farmers save time during planting and they get to work tog
     {% endfor %}
   </div>
     {% endif %}
-
+    {% if user.is_authenticated %}
     <a href="{%url 'new-activity'%}" class="login" style="color: rgb(97, 66, 6);height: 40px;width: 25px;">New Activity</a>
-
+     {% endif %}
 </div>
 
 {% endblock %}
