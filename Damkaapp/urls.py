@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'logout/$',views.signout),
     url(r'^vacancies$', views.careers, name= 'vacancies'),
     url(r'^new/activity$', views.new_activity, name='new-activity'),
+    url(r'^new/event$', views.new_event, name='new-event'),
     url(r'^resources$', views.resources, name= 'resources'),
     url(r'^about$', views.about, name= 'about'),
     url(r'^activities$', views.activities, name= 'activities'),

@@ -14,7 +14,7 @@ class NewActivityForm(forms.ModelForm):
 
 class NewEventForm(forms.ModelForm):
     class Meta:
-        model = Activity
+        model = Event
         exclude = ['Author', 'pub_date', 'author_profile','admin_profile', ]
         widgets = {
           'activity': forms.Textarea(attrs={'rows':2, 'cols':10,}),

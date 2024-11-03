@@ -44,9 +44,9 @@ def donate(request):
 
     return render(request, 'donate.html')
 def events(request):
-  
+    events = Event.objects.all()
 
-    return render(request, 'events.html')
+    return render(request, 'events.html', {'events':events})
 def careers(request):
   
 
@@ -90,6 +90,26 @@ def new_activity(request):
         form = NewActivityForm()
     return render(request, 'newactivity.html', {"form": form})
 
+
+@login_required(login_url='/login/')
+def new_event(request):
+    current_user = request.user
+    profile = request.user.profile
+   
+
+    if request.method == 'POST':
+        form1 = NewEventForm(request.POST, request.FILES)
+        if form1.is_valid():
+            event = form1.save(commit=False)
+            event.Author = current_user
+            event.author_profile = profile
+
+            event.save()
+        return redirect('index')
+
+    else:
+        form1 = NewEventForm()
+    return render(request, 'newevent.html', {"form1": form1})
 
  
 def signout(request):

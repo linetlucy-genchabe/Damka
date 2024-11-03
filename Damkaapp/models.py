@@ -58,12 +58,12 @@ class Activity(models.Model):
     @classmethod
     def get_activities(request, id):
         try:
-            account = Activity.objects.get(pk = id)
+            activity = Activity.objects.get(pk = id)
             
         except ObjectDoesNotExist:
             raise Http404()
         
-        return account
+        return activity
     
     def update_activities(self):
         self.update_activities()
@@ -83,7 +83,7 @@ class Event(models.Model):
     Image = CloudinaryField('image', null= True)
     pub_date = models.DateTimeField(auto_now_add=True)
     Admin = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    admin_profile = models.ForeignKey(Profile,on_delete=models.CASCADE, blank=True, default='1')
+    # admin_profile = models.ForeignKey(Profile,on_delete=models.CASCADE, blank=True, default='1')
     
     
     def save_events(self):
@@ -102,12 +102,12 @@ class Event(models.Model):
     @classmethod
     def get_events(request, id):
         try:
-            account = Activity.objects.get(pk = id)
+            event = Event.objects.get(pk = id)
             
         except ObjectDoesNotExist:
             raise Http404()
         
-        return account
+        return event
     
     def update_events(self):
         self.update_events()
