@@ -94,8 +94,8 @@ class Event(models.Model):
         
     @classmethod
     def get_allevents(cls):
-        accounts = cls.objects.all()
-        return accounts
+        events = cls.objects.all()
+        return events
     
    
     
@@ -119,3 +119,47 @@ class Event(models.Model):
         ordering = ['-pub_date']
         verbose_name = 'My Events'
         verbose_name_plural = 'Events'
+
+            
+class Vacancy(models.Model):
+    Name = models.CharField(max_length=255)
+    Description = models.TextField(blank=True)
+    Email = models.EmailField(blank=True)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    Admin = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    
+    
+    
+    def save_vacancies(self):
+        self.save()
+    
+    def delete_vacancies(self):
+        self.delete()
+        
+    @classmethod
+    def get_allvacanciess(cls):
+        vacancies = cls.objects.all()
+        return vacancies
+    
+   
+    
+    @classmethod
+    def get_vacancies(request, id):
+        try:
+            vacancy = Vacancy.objects.get(pk = id)
+            
+        except ObjectDoesNotExist:
+            raise Http404()
+        
+        return vacancy
+    
+    def update_vacancies(self):
+        self.update_vacancies()
+    
+    def __str__(self):
+        return self.Name
+    
+    class Meta:
+        ordering = ['-pub_date']
+        verbose_name = 'My Vacancies'
+        verbose_name_plural = 'Vacancies'
